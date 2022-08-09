@@ -17,7 +17,7 @@ from colorama import Fore, Back, Style
 # you gain nothing except the encryption key (reset ever hour lmao) to a service only used for casual banter
 # lmao get fucked
 
-git_pass = "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"
+git_pass = "[redacted]"
 
 github = Github(git_pass)
 user = github.get_user()
@@ -69,7 +69,7 @@ use "help" when making a request to get help with currently available commands
         channel = "public"
     else:
         pass
-    client = pymongo.MongoClient(f"mongodb+srv://{username}:{password}@messagehost.r9loud3.mongodb.net/?retryWrites=true&w=majority", tlsCAFile=certifi.where())
+    client = pymongo.MongoClient(f"mongodb+srv://{username}:{password}@[redacted]/?retryWrites=true&w=majority", tlsCAFile=certifi.where())
     db = client["msgs"]
     col = db[channel]
     print(f"Connected to channel: {channel}")
@@ -122,7 +122,7 @@ def login():
     username = input("username:")
     password = input("password:")
     try:
-        client = pymongo.MongoClient(f"mongodb+srv://{username}:{password}@messagehost.r9loud3.mongodb.net/?retryWrites=true&w=majority", tlsCAFile=certifi.where())
+        client = pymongo.MongoClient(f"mongodb+srv://{username}:{password}@[redacted]/?retryWrites=true&w=majority", tlsCAFile=certifi.where())
         db = client["msgs"]
         col = db["login-log"]
             
